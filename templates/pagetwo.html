@@ -1,0 +1,84 @@
+{% block title %}
+    Index
+{% endblock %}
+{% block main %}
+<!--<head><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"></head>-->
+    <link href="{{ url_for('static', filename='sfd1wrong.png') }}" rel="stylesheet"/>
+    <head>
+            <style>
+                body {
+                    background-color: #ffc4f9;
+                    font-family: 'Nanum Brush Script', cursive;
+                    font-size:100%;
+                }
+                table{
+                    border-collapse: collapse;
+                }
+                h2{
+                    font-size: 200%;
+                    color:purple;
+                }
+                h1{
+                    font-size: 400%;
+                }
+                label > input{ /* HIDE RADIO */
+                    visibility: hidden; /* Makes input not-clickable */
+                    position: absolute; /* Remove input from document flow */
+                }
+                label > input + img{ /* IMAGE STYLES */
+                    cursor:pointer;
+                    border:2px solid transparent;
+                }
+                label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+                border:2px solid #f00;
+                }
+            </style>
+        </head>
+    <form action="{{ url_for('pagetwo') }}" method="post">
+        <fieldset>
+
+               <h1 style ="color:blue"> DO YOU UNDERSTAND THIS PHYSICS QUESTION????</h1>
+               <img src="https://lh3.googleusercontent.com/S406_iLONlfMF322AcWWckmGdxoaEwxnXBUEdLxGJWdS-H3kUxJedWg8fy8x6tsCXAqylR2046Qd9VA_lLo8fgl7jHkTOYYEwdwZTGyrZW0CiofFdO_X_0EsUcnYRAxTQJXs2hmORQ=w2400" alt="bleeeeee"style="width:332px;height:118px"</img>
+               <<h2>WHAT IS THE CORRECT SUM OF FORCES?</h2>
+
+                 <table style="width:100%">
+
+
+                    <td style="width:25%">
+                        <label>
+                            <input type="radio" name="sumforce" value="one">
+                            <img src="https://lh3.googleusercontent.com/BoIJL-aMXrT_WIYarLKtsnfH1yV1zdCqYLk4I8Ix32BrDPtvcjeJNXY1hUMgLCstTEHe4Wcx4G2Enghxg1VoY7C3LG-rmdrM_QOSf1d9c_e7dTiUym08LSDv5D0xwFOHjRGVo4Y6hg=w2400" alt="bleeeeee"style="width:200px;height:50px"</img>
+                        </label>
+                    </td>
+                    <td style="width:25%">
+
+                        <label>
+                            <input type="radio" name="sumforce" value="two">
+                            <img src="https://lh3.googleusercontent.com/I8OcaQ4kloRw8JClvlwmiFrIoLh6lXVdEt02IlwangsRHgobi9WzO5QMLHHvRDI4eP4wn8kJAO7-pfcky_38dmWor7_PO_E4hVtdzLBZQrfNz3gIaRS5nuM7qGS6NHJRs2scNPLBTA=w2400"style="width:200px;height:50px">
+                        </label>
+                    </td>
+                    </tr>
+                    <tr>
+                    <td style="width:25%">
+                    <label>
+                         <input type="radio" name="sumforce" value="three">
+                         <img src="https://lh3.googleusercontent.com/SG9wP93q_ppVcZZkgX4n7YQtxSLpTkr48cHw9KUDg5PVL2hTi8r80fQZqsY4pBQ905fLiGgY7k4zKgPwAdDQJhmA1AMea_7MM8_FAT6YBjRG4rHx2fCTKtsfIYOVBZC4UUaSv8-_6A=w2400"style="width:200px;height:50px">
+                    </label>
+                    </td>
+                    <td style="width:25%">
+                         <label>
+                            <input type="radio" name="sumforce" value="four">
+                            <img src="https://lh3.googleusercontent.com/L0rbM2tn9_E3LYJCAv7L1jJMmvDrhstwptBximfCqMTMmUXKFbAAf2PFyyUlHN2wee83U0u7Lpa5ddvmkafIGKoKX0flHSyT5_OFtuuWMwLRGppI5uYEbwnKdIOQixmg-r07Apq-LA=w2400"style="width:200px;height:50px">
+                        </label>
+                    </td>
+                </table>
+
+          <center>
+                 <input type="submit" name=submit value="Submit">
+              </center>
+               <center>
+                <a href="{{ url_for('solution') }}">Solution</a>
+              </center>
+        </fieldset>
+    </form>
+{% endblock %}

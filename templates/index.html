@@ -1,0 +1,83 @@
+{% block title %}
+    Index
+{% endblock %}
+{% block main %}
+<!--<head><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"></head>-->
+    <link href="{{ url_for('static', filename='sfd1wrong.png') }}" rel="stylesheet"/>
+    <head>
+            <style>
+                body {
+                    background-color: #ffc4f9;
+                    font-family: 'Nanum Brush Script', cursive;
+                    font-size:100%;
+                }
+                table{
+                    border-collapse: collapse;
+                }
+                h2{
+                    font-size: 200%;
+                    color:purple;
+                }
+                h1{
+                    font-size: 400%;
+                }
+                label > input{ /* HIDE RADIO */
+                    visibility: hidden; /* Makes input not-clickable */
+                    position: absolute; /* Remove input from document flow */
+                }
+                label > input + img{ /* IMAGE STYLES */
+                    cursor:pointer;
+                    border:2px solid transparent;
+                }
+                label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+                border:2px solid #f00;
+                }
+            </style>
+        </head>
+    <form action="{{ url_for('index') }}" method="post">
+        <fieldset>
+
+               <h1 style ="color:blue"> DO YOU UNDERSTAND THIS PHYSICS QUESTION????</h1>
+               <img src="https://lh3.googleusercontent.com/S406_iLONlfMF322AcWWckmGdxoaEwxnXBUEdLxGJWdS-H3kUxJedWg8fy8x6tsCXAqylR2046Qd9VA_lLo8fgl7jHkTOYYEwdwZTGyrZW0CiofFdO_X_0EsUcnYRAxTQJXs2hmORQ=w2400" alt="bleeeeee"style="width:332px;height:118px"</img>
+               <h2>HOW DO YOU SET UP THE FORCE DIAGRAM?</h2>
+
+                 <table style="width:100%">
+
+                    <td style="width:25%">
+                        <label>
+                            <input type="radio" name="forced" value="one">
+                            <img src="https://lh3.googleusercontent.com/czqcLTDNPBh4aWJNH_GP4ThXB3MbPheFwFicQCqjyJ3qyG52TRC-ThpqtFCkVClMywiAKf5nA9VMZ5iTNonDZMNC0SyhjlZIq1d_9iR7kSEZaB6csw-U9oGQ_pLnFv9FdMdWo-0ffA=w2400" alt="bleeeeee"style="width:170px;height:200px"</img>
+                        </label>
+                    </td>
+                    <td style="width:25%">
+
+                        <label>
+                            <input type="radio" name="forced" value="two">
+                            <img src="https://lh3.googleusercontent.com/gTdS6Yjv_fORlQ-BjaZWnM49AFFImOv45qC9SaBzba8fAWNkilchN3KEy5jrDuaOcoSOYRBMyxRm_eeznGKKZ-ljjVmtPEPfK89VPZ6FEYMo_mL3W2AmyYN5SKZ1CmT2pFUZs20z6Q=w2400"style="width:170px;height:200px">
+                        </label>
+                    </td>
+                    </tr>
+                    <tr>
+                    <td style="width:25%">
+                    <label>
+                         <input type="radio" name="forced" value="three">
+                         <img src="https://lh3.googleusercontent.com/9W7YFxavGc9fqBhB8mmmHKSMH64wPZVSpoWlUbLz0mmK-HTHbUf1DTG_GA-wLhCOS9hYzwH35QpFzuWTJ0lo471geXEacICendoAXcU7ftP8MN4kaJeTkifMtgUVXdVP46O4vj6SIA=w2400"style="width:170px;height:200px">
+                    </label>
+                    </td>
+                    <td style="width:25%">
+                         <label>
+                            <input type="radio" name="forced" value="four">
+                            <img src="https://lh3.googleusercontent.com/XTM7woqBVwoUkr7X4gLHg9GWtRzUMG7Zyn4CMx1xu3s5MlaQWFUDCZSbYgp6k_L030kS_B1jerFY91aS8uhESvLpNU1m8O9CGa-OhLLA4u0eTxV3JiK21qeTrx7fay1GoK8AYWqt8Q=w2400"style="width:170px;height:200px">
+                        </label>
+                    </td>
+                </table>
+
+          <center>
+                 <input type="submit" name=submit value="Submit">
+              </center>
+               <center>
+                <a href="{{ url_for('solution') }}">Solution</a>
+              </center>
+        </fieldset>
+    </form>
+{% endblock %}

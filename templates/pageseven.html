@@ -1,0 +1,82 @@
+{% block title %}
+    Index
+{% endblock %}
+{% block main %}
+<!--<head><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"></head>-->
+    <link href="{{ url_for('static', filename='sfd1wrong.png') }}" rel="stylesheet"/>
+    <head>
+            <style>
+                body {
+                    background-color: #ffc4f9;
+                    font-family: 'Nanum Brush Script', cursive;
+                    font-size:100%;
+                }
+                table{
+                    border-collapse: collapse;
+                }
+                h2{
+                    font-size: 200%;
+                    color:purple;
+                }
+                h1{
+                    font-size: 400%;
+                }
+                label > input{ /* HIDE RADIO */
+                    visibility: hidden; /* Makes input not-clickable */
+                    position: absolute; /* Remove input from document flow */
+                }
+                label > input + img{ /* IMAGE STYLES */
+                    cursor:pointer;
+                    border:2px solid transparent;
+                }
+                label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+                border:2px solid #f00;
+                }
+            </style>
+        </head>
+    <form action="{{ url_for('pageseven') }}" method="post">
+        <fieldset>
+
+               <h1 style ="color:blue"> DO YOU UNDERSTAND THIS PHYSICS QUESTION????</h1>
+               <img src="https://lh3.googleusercontent.com/S406_iLONlfMF322AcWWckmGdxoaEwxnXBUEdLxGJWdS-H3kUxJedWg8fy8x6tsCXAqylR2046Qd9VA_lLo8fgl7jHkTOYYEwdwZTGyrZW0CiofFdO_X_0EsUcnYRAxTQJXs2hmORQ=w2400" alt="bleeeeee"style="width:332px;height:118px"</img>
+                <h2>WHAT IS THE CORRECT TENSION?</h2>
+                 <table style="width:100%">
+                   <tr>
+                    <td style="width:25%">
+                        <label>
+                            <input type="radio" name="tension" value="one">
+                            <img src="https://lh3.googleusercontent.com/y4SLhrHdhd2lmex6n9JvhD6et_7WJtNjl9YYVON44I5CT20wkCyLbYmqC_P251FeWU8ItxcGlra7jMZlD2kFEsrx9Ug3jsNUCQ7nj5b81pNwLHKMI5mwL7KZVzpVHjJ7V5ln8COghg=w2400" alt="bleeeeee"style="width:120px;height:65px"</img>
+                        </label>
+                    </td>
+                    <td style="width:25%">
+
+                        <label>
+                            <input type="radio" name="tension" value="two">
+                            <img src="https://lh3.googleusercontent.com/bgyxQuaJIiWGYMKPeTF2pZQT2ipR-RPiPSdZQvnD9qy98hcTT4jOA2W6gl9qTwhVx0vtHn_Tv9In6zW6OojZrgbo-__uaeA8oFhlqGBZ0ntzlKTLR6mxdF_4JuE7lUCCIdAH0AEAug=w2400"style="width:120px;height:65px">
+                        </label>
+                    </td>
+                    </tr>
+                    <tr>
+                    <td style="width:25%">
+                    <label>
+                         <input type="radio" name="tension" value="three">
+                         <img src="https://lh3.googleusercontent.com/nUVMhkncx83zwHz_H2-DfOcQCBQv5dljxV2abzbzzdnXN41wXCC9hmTvcSgl7W3No6Fx7Nl7kKvBu7WPKQLtn7Fjg3jKZ09blPMSSyOUECQODW9cyfDSkaQi45t8LnetrOnRHz_Lbw=w2400"style="width:120px;height:65px">
+                    </label>
+                    </td>
+                    <td style="width:25%">
+                         <label>
+                            <input type="radio" name="tension" value="four">
+                            <img src="https://lh3.googleusercontent.com/IejDYK2jh6XvrfVhiZ27SEinz_SzPsCk1g2Oqz8rkxbg8ELMU13Cv_vZyaKojJBwKMYtEGqg8DIDeEl0r2338MKAhT1bey3UMrrmuW63lkWVUO5_LsGtG_7nKxukUxq8NUtiB3Y2aQ=w2400"style="width:120px;height:65px">
+                        </label>
+                    </td>
+                    </tr>
+                 </table>
+          <center>
+                 <input type="submit" name=submit value="Submit">
+              </center>
+               <center>
+                <a href="{{ url_for('solution') }}">Solution</a>
+              </center>
+        </fieldset>
+    </form>
+{% endblock %}

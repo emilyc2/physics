@@ -1,0 +1,84 @@
+{% block title %}
+    Index
+{% endblock %}
+{% block main %}
+<!--<head><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"></head>-->
+    <link href="{{ url_for('static', filename='sfd1wrong.png') }}" rel="stylesheet"/>
+    <head>
+            <style>
+                body {
+                    background-color: #ffc4f9;
+                    font-family: 'Nanum Brush Script', cursive;
+                    font-size:100%;
+                }
+                table{
+                    border-collapse: collapse;
+                }
+                h2{
+                    font-size: 200%;
+                    color:purple;
+                }
+                h1{
+                    font-size: 400%;
+                }
+                label > input{ /* HIDE RADIO */
+                    visibility: hidden; /* Makes input not-clickable */
+                    position: absolute; /* Remove input from document flow */
+                }
+                label > input + img{ /* IMAGE STYLES */
+                    cursor:pointer;
+                    border:2px solid transparent;
+                }
+                label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+                border:2px solid #f00;
+                }
+            </style>
+        </head>
+    <form action="{{ url_for('pagethree') }}" method="post">
+        <fieldset>
+
+               <h1 style ="color:blue"> DO YOU UNDERSTAND THIS PHYSICS QUESTION????</h1>
+               <img src="https://lh3.googleusercontent.com/S406_iLONlfMF322AcWWckmGdxoaEwxnXBUEdLxGJWdS-H3kUxJedWg8fy8x6tsCXAqylR2046Qd9VA_lLo8fgl7jHkTOYYEwdwZTGyrZW0CiofFdO_X_0EsUcnYRAxTQJXs2hmORQ=w2400" alt="bleeeeee"style="width:332px;height:118px"</img>
+                  <h2>WHAT IS THE CORRECT SUM OF TORQUE?</h2>
+                 <table style="width:100%">
+                   <tr>
+                       <td style="width:25%">
+                        <label>
+                            <input type="radio" name="sumtorque" value="one">
+                            <img src="https://lh3.googleusercontent.com/y_MmM5p4H3P1DQdS8GF8WQgzRw4EIawA_JbHLC9lnx0GBV4Ra82e1mWrHE6985x5kqE2wO1iYtVwcTcGpOBpZi3ohbSTCMK6wrn-TQLqMrHTVZUmwts35XzSHxuEPPQ8PZPfXXN4ag=w2400" alt="bleeeeee"style="width:200px;height:50px"</img>
+                        </label>
+                    </td>
+                    <td style="width:25%">
+
+                        <label>
+                            <input type="radio" name="sumtorque" value="two">
+                            <img src="https://lh3.googleusercontent.com/yH-AMoGvSfnWIv-cleqmlGSR-SRE35gxw_UDWCoEKtAyNVW2AFEfOMg4ATiDboogjSQ0yluqvjFYNkLHWM8pNGB2kRLhbkosPuhp2sRB7Y3kzeGbpD1TsxxnTXkA4wk-vJAqnrdJqA=w2400"style="width:200px;height:50px">
+                        </label>
+                    </td>
+                    </tr>
+                    <tr>
+                    <td style="width:25%">
+                    <label>
+                         <input type="radio" name="sumtorque" value="three">
+                         <img src="https://lh3.googleusercontent.com/q0PvMZPwRUG-S93nWNOZRq3Pe3eSxw16-_W0UQq0ATNVQQ5fBNPuA22nvEq-euf3DLEpuXOCy3x0cwqjh5i1VwjBnaHdocApmyKpylwkAozI20rKiIPohyCHwdRJL4MXrzzjX0iyNg=w2400"style="width:200px;height:50px">
+                    </label>
+                    </td>
+                    <td style="width:25%">
+                         <label>
+                            <input type="radio" name="sumtorque" value="four">
+                            <img src="https://lh3.googleusercontent.com/Y78kO4fW3Mpvy6at1comRrFIij_IQGGbNOsvrOut5QgEeB3iLnaB8XmWTXoToDLhwNneSePsCOTMgtAJ4N4NE4Bt3w0w3dYSYvRcOspfUMuIWbD_C3Ven80EhHQGAsaQf3wzRId5Wg=w2400"style="width:200px;height:50px">
+                        </label>
+                    </td>
+
+                    </tr>
+                    </table>
+
+          <center>
+                 <input type="submit" name=submit value="Submit">
+              </center>
+               <center>
+                <a href="{{ url_for('solution') }}">Solution</a>
+              </center>
+        </fieldset>
+    </form>
+{% endblock %}

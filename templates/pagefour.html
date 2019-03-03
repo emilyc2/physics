@@ -1,0 +1,84 @@
+{% block title %}
+    Index
+{% endblock %}
+{% block main %}
+<!--<head><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"></head>-->
+    <link href="{{ url_for('static', filename='sfd1wrong.png') }}" rel="stylesheet"/>
+    <head>
+            <style>
+                body {
+                    background-color: #ffc4f9;
+                    font-family: 'Nanum Brush Script', cursive;
+                    font-size:100%;
+                }
+                table{
+                    border-collapse: collapse;
+                }
+                h2{
+                    font-size: 200%;
+                    color:purple;
+                }
+                h1{
+                    font-size: 400%;
+                }
+                label > input{ /* HIDE RADIO */
+                    visibility: hidden; /* Makes input not-clickable */
+                    position: absolute; /* Remove input from document flow */
+                }
+                label > input + img{ /* IMAGE STYLES */
+                    cursor:pointer;
+                    border:2px solid transparent;
+                }
+                label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+                border:2px solid #f00;
+                }
+            </style>
+        </head>
+    <form action="{{ url_for('pagefour') }}" method="post">
+        <fieldset>
+
+               <h1 style ="color:blue"> DO YOU UNDERSTAND THIS PHYSICS QUESTION????</h1>
+               <img src="https://lh3.googleusercontent.com/S406_iLONlfMF322AcWWckmGdxoaEwxnXBUEdLxGJWdS-H3kUxJedWg8fy8x6tsCXAqylR2046Qd9VA_lLo8fgl7jHkTOYYEwdwZTGyrZW0CiofFdO_X_0EsUcnYRAxTQJXs2hmORQ=w2400" alt="bleeeeee"style="width:332px;height:118px"</img>
+                <h2>WHAT IS THE CORRECT COMBINATION OF THE EQUATIONS?</h2>
+
+
+                 <table style="width:100%">
+
+                    <td style="width:25%">
+                        <label>
+                            <input type="radio" name="combo" value="one">
+                            <img src="https://lh3.googleusercontent.com/Abj8em20ub7LupPy4oBpdWxD32L6aR7fjx76mfpnhRkCh6PJPPhRhPyoRkU3c9s-kFkF9z2eZe_I-TYtfi5pRU5TiT0tcGbe9YUPE4yHhNSS43q6QCrpqtmu8zWucKoem8FK-tftFg=w2400" alt="bleeeeee"style="width:200px;height:50px"</img>
+                        </label>
+                    </td>
+                    <td style="width:25%">
+
+                        <label>
+                            <input type="radio" name="combo" value="two">
+                            <img src="https://lh3.googleusercontent.com/w0RxlnyzBMF7qB5b0lT09sPa6GRGifhpHxAjlWso03_Ym-H7zzG_AcaTvhU9YHaHHhCalcMYL6t7TygFiG3w50qbj-QwjjgihdcJIo7IpWarepQx3NasOLKKlATyKVXhTMMHarNJ4g=w2400"style="width:200px;height:50px">
+                        </label>
+                    </td>
+                    </tr>
+                    <tr>
+                    <td style="width:25%">
+                    <label>
+                         <input type="radio" name="combo" value="three">
+                         <img src="https://lh3.googleusercontent.com/vhoia2wI5dpPBVTKhE7sPINGfMgDGgL4WOglT_EQsUuN7hlpGe-NKLmbrn9JDp7GcZ9bqMa1yDjcMis2aPgk9kuFbJa8NelhRf8b0YIX9jhvC1XZUUga8ch3V3y19MZlR7-WjJfLNQ=w2400"style="width:200px;height:50px">
+                    </label>
+                    </td>
+                    <td style="width:25%">
+                         <label>
+                            <input type="radio" name="combo" value="four">
+                            <img src="https://lh3.googleusercontent.com/tu8D6KZuIwyoISh004GUWtr0qKsxrPDQptjRpx3-PQg-Gpsm0_qvXxq2HKPB4BDc5-NUTRyIq-C3wE1-Nutk4CjLXy0Z1E_4GxLE4K438k0FvFHSZeam9aj3GXKBLPv3q4umohtZbQ=w2400"style="width:200px;height:50px">
+                        </label>
+                    </td>
+                    </tr>
+                    </table>
+                <center>
+                 <input type="submit" name=submit value="Submit">
+              </center>
+               <center>
+                <a href="{{ url_for('solution') }}">Solution</a>
+              </center>
+        </fieldset>
+    </form>
+{% endblock %}
